@@ -13,4 +13,10 @@ describe('App', () => {
     const pseudoCalculator = screen.queryByTestId('pseudoCalculator');
     expect(pseudoCalculator).not.toBeNull();
   });
+
+  it('renders todo list component', () => {
+    render(<App />);
+    const todoList = screen.queryByTestId('todoList');
+    expect(todoList).not.toBeNull();
+  });
 });
