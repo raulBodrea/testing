@@ -1,12 +1,14 @@
-import { useState } from 'react';
-
-const PseudoCalculator = ({ initialValue }) => {
-  const [firstNumber, setFirstNumber] = useState(initialValue || 0);
-  const [secondNumber, setSecondNumber] = useState(0);
-  const [result, setResult] = useState(null);
-
+const PseudoCalculator = ({
+  firstNumber,
+  setFirstNumber,
+  secondNumber,
+  setSecondNumber,
+  result,
+  setResult,
+}) => {
   return (
     <div
+      data-testId="pseudoCalculator"
       style={{
         display: 'flex',
         flexDirection: 'column',
