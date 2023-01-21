@@ -34,7 +34,11 @@ const TodoList = ({ initialTodos }) => {
     >
       <ul>
         {todos.map((todo, idx) => (
-          <li data-testid="todo" onClick={() => handleCompleteTodo(idx)}>
+          <li
+            data-testid="todo"
+            onClick={() => handleCompleteTodo(idx)}
+            key={idx}
+          >
             {todo}
           </li>
         ))}

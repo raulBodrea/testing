@@ -19,4 +19,13 @@ describe('App', () => {
     const todoList = screen.queryByTestId('todoList');
     expect(todoList).not.toBeNull();
   });
+
+  it('renders blog component', () => {
+    render(<App />);
+
+    screen.getByText('Blog'); // Implicit
+    // vs
+    const blog = screen.queryByText('Blog'); // Explicit
+    expect(blog).not.toBeNull();
+  });
 });

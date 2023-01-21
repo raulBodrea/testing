@@ -19,6 +19,7 @@ describe('Counter', () => {
   // it / test -> Defineste un test. Sintaxa: it('descrierea testului', () => { render(<...})
   it('renders the current count', () => {
     render(<Counter />);
+
     const currentCountElement = screen.queryByText('Current count is 0');
     // expect -> Un obiect care vine din jest care ne permite sa scriem validari. Pentru a vedea ce stie sa faca acest obiect: https://jestjs.io/docs/expect
     expect(currentCountElement).not.toBeNull();
